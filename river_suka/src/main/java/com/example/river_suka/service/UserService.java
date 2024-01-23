@@ -4,4 +4,6 @@ import com.example.river_suka.dto.UserDto;
 
 public interface UserService {
     UserDto createUser(UserDto userDto);
+
+    UserDto getUserById(Long userId);
 }
