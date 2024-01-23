@@ -10,6 +10,9 @@ import mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
@@ -28,5 +31,12 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User is not found - " + userId));
         return UserMapper.mapToUserDto(user);
+    }
+
+    @Override
+    public List<UserDto> getAllUsers() {
+        List<User> users= userRepository.findAll();
+        List<UserDto> collect = users.stream().map((user) -> UserMapper.mapToUserDto(user)).collect(Collectors.toList());
+        return collect;
     }
 }
