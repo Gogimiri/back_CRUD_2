@@ -6,8 +6,7 @@ import com.example.river_suka.exception.ResourceNotFoundException;
 import com.example.river_suka.repository.UserRepository;
 import com.example.river_suka.service.UserService;
 import lombok.AllArgsConstructor;
-import mapper.UserMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.river_suka.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,5 +37,23 @@ public class UserServiceImpl implements UserService {
         List<User> users= userRepository.findAll();
         List<UserDto> collect = users.stream().map((user) -> UserMapper.mapToUserDto(user)).collect(Collectors.toList());
         return collect;
+    }
+
+    @Override
+    public UserDto updateUser(Long userId, UserDto updatedUserDto) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("user is not found - " + userId));
+
+        user.setName(updatedUserDto.getName());
+        user.setEmail(updatedUserDto.getEmail());
+        user.setPassword(updatedUserDto.getPassword());
+        return UserMapper.mapToUserDto(user);
+    }
+
+    @Override
+    public void deleteUser(Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("user is not found - " + userId));
+        userRepository.deleteById(userId);
     }
 }

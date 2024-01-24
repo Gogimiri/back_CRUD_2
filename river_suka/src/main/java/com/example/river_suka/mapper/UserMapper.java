@@ -1,4 +1,4 @@
-package mapper;
+package com.example.river_suka.mapper;
 
 import com.example.river_suka.dto.UserDto;
 import com.example.river_suka.entity.User;

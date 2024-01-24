@@ -16,7 +16,6 @@ import java.util.List;
 public class UserController {
     private UserService userService;
 
-
     // Add user into database
     @PostMapping("/create")
     public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto) {
@@ -35,7 +34,23 @@ public class UserController {
     @GetMapping("/all")
     public ResponseEntity<List<UserDto>> getAllUsers() {
         List<UserDto> userDtos = userService.getAllUsers();
-        return  ResponseEntity.ok(userDtos);
+        return ResponseEntity.ok(userDtos);
     }
 
+    @PutMapping("{id}")
+    public ResponseEntity<?> updateUserById(@PathVariable("id") Long userId, @RequestBody UserDto updatedUserDto) {
+        try {
+            UserDto userDto = userService.updateUser(userId, updatedUserDto);
+            return ResponseEntity.ok(userDto);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("User cant be updated");
+        }
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable("id") Long userId) {
+        userService.deleteUser(userId);
+        return ResponseEntity.ok("user was deleted");
+    }
 }
