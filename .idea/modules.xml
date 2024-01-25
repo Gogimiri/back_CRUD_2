@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/river_suka.iml" filepath="$PROJECT_DIR$/.idea/river_suka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/back_CRUD_2.iml" filepath="$PROJECT_DIR$/.idea/back_CRUD_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/river_suka/river_suka.iml" filepath="$PROJECT_DIR$/river_suka/river_suka.iml" />
     </modules>
   </component>
 </project>
