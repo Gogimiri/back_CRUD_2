@@ -1,4 +1,4 @@
-package com.example.river_suka.dto;
+package com.example.crud_application.dto;
 
 import lombok.*;
 

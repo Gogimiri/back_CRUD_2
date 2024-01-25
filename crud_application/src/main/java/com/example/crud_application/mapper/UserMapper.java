@@ -1,8 +1,7 @@
-package com.example.river_suka.mapper;
+package com.example.crud_application.mapper;
 
-import com.example.river_suka.dto.UserDto;
-import com.example.river_suka.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.crud_application.dto.UserDto;
+import com.example.crud_application.entity.User;
 
 public class UserMapper {
 

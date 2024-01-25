@@ -1,4 +1,4 @@
-package com.example.river_suka.entity;
+package com.example.crud_application.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,12 +1,12 @@
-package com.example.river_suka.service.implementation;
+package com.example.crud_application.service.implementation;
 
-import com.example.river_suka.dto.UserDto;
-import com.example.river_suka.entity.User;
-import com.example.river_suka.exception.ResourceNotFoundException;
-import com.example.river_suka.repository.UserRepository;
-import com.example.river_suka.service.UserService;
+import com.example.crud_application.dto.UserDto;
+import com.example.crud_application.entity.User;
+import com.example.crud_application.exception.ResourceNotFoundException;
+import com.example.crud_application.repository.UserRepository;
+import com.example.crud_application.service.UserService;
 import lombok.AllArgsConstructor;
-import com.example.river_suka.mapper.UserMapper;
+import com.example.crud_application.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

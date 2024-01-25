@@ -1,9 +1,8 @@
-package com.example.river_suka.controller;
+package com.example.crud_application.controller;
 
-import com.example.river_suka.dto.UserDto;
-import com.example.river_suka.service.UserService;
+import com.example.crud_application.dto.UserDto;
+import com.example.crud_application.service.UserService;
 import lombok.AllArgsConstructor;
-import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

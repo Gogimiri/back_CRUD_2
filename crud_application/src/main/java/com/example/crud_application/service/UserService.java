@@ -1,6 +1,6 @@
-package com.example.river_suka.service;
+package com.example.crud_application.service;
 
-import com.example.river_suka.dto.UserDto;
+import com.example.crud_application.dto.UserDto;
 import java.util.List;
 
 public interface UserService {

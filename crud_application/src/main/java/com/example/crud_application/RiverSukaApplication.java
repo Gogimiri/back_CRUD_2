@@ -1,4 +1,4 @@
-package com.example.river_suka;
+package com.example.crud_application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
